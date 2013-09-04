@@ -1,4 +1,9 @@
 AAAWebsite::Application.routes.draw do
+  resources :comments
+
+  devise_for :users
+  resources :events
+
   #get "aaa_core/index"
   #get "aaa_core/events"
   #get "aaa_core/shop"
@@ -14,7 +19,7 @@ AAAWebsite::Application.routes.draw do
   
 	# Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-	get '/events',     :to => 'aaa_core#events'
+	#get '/events',     :to => 'aaa_core#events'
   get '/shop',       :to => 'aaa_core#shop'
   get '/discussion', :to => 'aaa_core#discussion'
 
